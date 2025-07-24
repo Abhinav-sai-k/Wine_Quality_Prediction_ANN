@@ -1,0 +1,49 @@
+# To activate this environment, use
+#
+#     $ conda activate ANN_venv
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+# Note: when creating a virtual environment if you don't specify --name in command 
+It create a venev with given name in current active venev
+EX :                   
+base                   D:\Anaconda
+ml_venv                D:\Anaconda\envs\ml_venv
+                       E:\vs_code_dsa\ANN\venv
+
+but when we specify name properly...it creates the venv in global location insted of local!
+base                   D:\Anaconda
+ANN_venv               D:\Anaconda\envs\ANN_venv
+ml_venv                D:\Anaconda\envs\ml_venv
+
+
+How to create and activate a venv in conda by it's name?
+=========================================================
+conda create --name myproject_env python=3.10
+conda activate myproject_env
+
+How to install requirements using a txt file?
+=======================================================
+pip install -r requiremnts.txt
+
+How to export the environment to recreate it later?
+=======================================================
+conda env export --name myproject_env > environment.yml
+
+How to use this yml file to recreate an environment?
+=====================================================
+conda env create -f environment.yml
+
+How to remove a virtual environment by name or by cmd terminal(using rmdir)?
+=============================================================================
+rmdir /S /Q "E:\vs_code_dsa\ANN\venv"   
+or 
+conda remove --name venv --all
+
+How to view all virtual environments?
+========================================
+conda info --envs
+or 
+conda env list 
